@@ -59,14 +59,15 @@ module.exports = function (RED) {
 				}
 			})
 
-			if (upsUser && upsPass)
+			if (upsUser && upsPass) {
 				nut.SetUsername(upsUser, () => nut.SetPassword(upsPass, () => nut.start()))
-			else if (upsUser)
+			} else if (upsUser) {
 				nut.SetUsername(upsUser, () => nut.start())
-			else if (upsPass)
+			} else if (upsPass) {
 				nut.SetPassword(upsPass, () => nut.start())
-			else
+			} else {
 				nut.start()
+			}
 			this.trace('started')
 		})
 	}
