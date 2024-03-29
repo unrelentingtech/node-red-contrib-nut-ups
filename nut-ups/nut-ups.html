@@ -13,8 +13,8 @@
 			return this.name || 'nut ups'
 		},
 		labelStyle: function() {
-            return (this.name)?"node_label_italic":"";
-        }
+			return (this.name)?"node_label_italic":"";
+		}
 	})
 </script>
 
@@ -44,37 +44,37 @@
 </script>
 
 <script type="text/html" data-help-name="nut-ups">
-<p>Connects to a Network UPS Tools (NUT) server and publishes UPS variables</p>
+	<p>Connects to a Network UPS Tools (NUT) server and publishes UPS variables</p>
 
-<h3>Inputs</h3>
-    <dl class="message-properties">
-        <dt>payload
-            <span class="property-type">any</span>
-        </dt>
-        <dd> anything to trigger the node. </dd>
-        <dt class="optional">ups <span class="property-type">string</span></dt>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt>payload
+			<span class="property-type">any</span>
+		</dt>
+		<dd> anything to trigger the node. </dd>
+		<dt class="optional">ups <span class="property-type">string</span></dt>
 		<dd> the ups name and NUT server in the form of <b>ups@server</b>, if not 
 		set, the node configuration will be used.</dd>
-    </dl>
+	</dl>
 
- <h3>Outputs</h3>
-    <dl class="message-properties">
-        <dt>payload <span class="property-type">object</span></dt>
-        <dd>an object representation of the available NUT UPS variables.</dd>
-    </dl>
+	<h3>Outputs</h3>
+	<dl class="message-properties">
+		<dt>payload <span class="property-type">object</span></dt>
+		<dd>an object representation of the available NUT UPS variables.</dd>
+	</dl>
 
-<h3>Details</h3>
+	<h3>Details</h3>
 	<p><code>msg.payload</code> is used to trigger a connection to the NUT server. 
 	it will be replaced with the available dot-notated NUT UPS variables converted
 	to an object.</p>
-    <p>The ups@server info can be configured in the node or it can be set
-    by <code>msg.ups</code>.</p>
+	<p>The ups@server info can be configured in the node or it can be set
+	by <code>msg.ups</code>.</p>
 	<p>Likewise the port value for the NUT server can be configured in the node or
 	set by <code>msg.port</code></p>
 
-<h3>References</h3>
-    <ul>
-        <li><a href='https://networkupstools.org'>Network UPS Tools (NUT) Project</a></li>
-        <li><a href='https://github.com/valpackett/node-red-contrib-nut-ups'>GitHub repository</a> for this node.</li>
-    </ul>
+	<h3>References</h3>
+	<ul>
+		<li><a href='https://networkupstools.org'>Network UPS Tools (NUT) Project</a></li>
+		<li><a href='https://github.com/valpackett/node-red-contrib-nut-ups'>GitHub repository</a> for this node.</li>
+	</ul>
 </script>
